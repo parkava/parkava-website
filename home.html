@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav .nav-links {
+            display: flex;
+        }
+        .icon {
+            color: white;
+            font-size: 20px;
+        }
+        .header {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .profile-text {
+            max-width: 400px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+        </div>
+        <div class="icon">☰</div>
+    </nav>
+
+    <div class="header">
+        Ava Park's CSCI 3308 Lab 3 Website
+    </div>
+
+    <div class="container">
+        <div class="profile">
+                <img src="resources/img/Home.jpg" alt="IMG-9866" border="0">
+            <div class="profile-text">
+                <p>Hi! I'm Ava. Welcome to my website where I share my hobbies, projects, and more.</p>
+                <a href="resume.html">View My Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Connect with me: 
+            <a href="https://github.com/CU-CSCI3308-Spring2025/lab-3-gui-development-parkava">GitHub</a>
+            <a href="https://www.linkedin.com">LinkedIn</a>
+        </p>
+    </div>
+
+</body>
+</html>

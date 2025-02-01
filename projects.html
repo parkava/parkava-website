@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav .nav-links {
+            display: flex;
+        }
+        .icon {
+            color: white;
+            font-size: 20px;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            margin: auto;
+            position: relative;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .project {
+            min-width: 100%;
+            position: relative;
+        }
+        .project img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .project-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .buttons button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buttons button:hover {
+            background-color: #555;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+        </div>
+        <div class="icon">☰</div>
+    </nav>
+
+    <div class="container">
+        <h1>My Projects</h1>
+        
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="project">
+                    <img src="resources/img/Projects_1.webp" alt="CSCI 1300 Game">
+                    <div class="project-info">
+                        <h3>CSCI 1300 Game</h3>
+                        <p>My first programming project ever was my game in CSCI 1300. I completed this project in Spring of 2024 after I had learned to program for the first time in "Starting Computing". This game albeit simple encompassed my knowledge from the class.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="resources/img/Projects_2.jpg" alt="CSCI 2270 Linux Terminal">
+                    <div class="project-info">
+                        <h3>CSCI 2270 Linux Terminal</h3>
+                        <p>My latest project was completed last semester in the class "Data Structures". The final project was replicating a Linux Terminal that focused on utilizing the many data structures we learned about in the class.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="resources/img/Projects_3.jpg" alt="Hackathon: Grove">
+                    <div class="project-info">
+                        <h3>Hackathon: Grove</h3>
+                        <p>I was invited to participate at CU Boulder's women in STEM and Buisness Hackathon. It was a great experience where a team and I created a productivity app called "Grove". This app was a social way to promote project completion within a corporate setting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="prevSlide()">❮ Prev</button>
+            <button onclick="nextSlide()">Next ❯</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Connect with me: 
+            <a href="https://github.com/CU-CSCI3308-Spring2025/lab-3-gui-development-parkava">GitHub</a>
+            <a href="https://www.linkedin.com">LinkedIn</a>
+        </p>
+    </div>
+
+    <script>
+        let index = 0;
+        function showSlide() {
+            const slides = document.querySelector('.carousel-inner');
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+        function nextSlide() {
+            const totalSlides = document.querySelectorAll('.project').length;
+            index = (index + 1) % totalSlides;
+            showSlide();
+        }
+        function prevSlide() {
+            const totalSlides = document.querySelectorAll('.project').length;
+            index = (index - 1 + totalSlides) % totalSlides;
+            showSlide();
+        }
+    </script>
+
+</body>
+</html>
